@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0ebe5;
+  }
+  
+  .book {
+    perspective: 1000px;
+  }
+  
+  .page {
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    transform-origin: left;
+    transition: transform 1s, opacity 0.5s;
+    position: absolute;
+    opacity: 0.5;
+  }
+  
+  #page1 {
+    opacity: 1;
+  }
+  
+  #page2 {
+    transform: rotateY(-180deg);
+  }
