@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+.mainmenubtn {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:20px;
+}
+.mainmenubtn:hover {
+    background-color: blue;
+    }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-child {
+    display: none;
+    background-color: skyblue;
+    min-width: 200px;
+}
+.dropdown-child a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-child a:hover {
+    background-color: blue;
+}
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Responsive Header</h1>
+<div class="dropdown">
+  <button class="mainmenubtn">Menu</button>
+  <div class="dropdown-child">
+    <a href="#">Page2</a>
+    <a href="#">Page3</a>
+    <a href="#">Page4</a>
+  </div>
+</div>
+</header>
+</body>
+</html>
