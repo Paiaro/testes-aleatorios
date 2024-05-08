@@ -3,135 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mayara Lingerie</title>
- <style>
+  <style>
+    * {
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+      box-sizing: border-box;
 
-body {
-  font-family: Arial, sans-serif;
-}
+    }
+    body {
 
-header {
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  padding: 20px;
-}
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-.logo-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 20px;
-  
-  
-}
+      margin: 0;
 
-.logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+      padding: 0;
 
-.navbar {
-  display: flex;
-  align-items: center;
-}
+      background-color: #fafafa;
 
-.navbar-toggle {
-  display: none;
-}
+      color: #333;
 
-.navbar-menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+      background-image: url('../imagens/computer-416569_1920.jpg');
 
-.navbar-menu li {
-  margin: 0 10px;
-}
+      background-repeat: no-repeat;
 
-.navbar-menu a {
-  color: #333;
-  text-decoration: none;
-}
+      background-size: cover;
 
-.navbar-menu a:hover {
-  color: #007bff;
-}
+    }
+    .container {
 
-@media (max-width: 768px) {
-  .navbar-toggle {
-    display: block;
-  }
+      display: flex;
 
-  .navbar-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
+      flex-direction: column;
 
-  .navbar-menu.show {
-    display: flex;
-  }
-}
+      max-width: 800px;
 
-main {
-  padding: 20px;
-}
+      margin: 2rem auto;
 
-.image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      padding: 1rem;
 
-.image-container img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
-}
- </style>
+      background-color: #fff;
+
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      border-radius: 10px;
+
+    }
+    .principal {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: space-between;
+
+    }
+    .conteudo-esquerda,
+
+    .conteudo-direita {
+      flex: 1;
+      /* tamanho minimo para conteudo */
+      min-width: 290px;
+    }
+    h1,
+
+    h2 {
+
+      color: #0C0C0C;
+
+      /* tamanho da fonte responsiva */
+
+      font-size: calc(1.4rem + 0.5vw);
+
+      margin-left: 0.4rem;
+
+    }
+
+    h1 {
+
+      text-align: center;
+
+    }
+    p,
+
+    li {
+
+      font-size: calc(0.9rem + 0.3vw);
+
+      line-height: 1.6;
+
+      margin-bottom: 0.75rem;
+
+      margin-left: 0.4rem;
+
+    }
+    /* pegando o primeiro paragrafo do tipo para modificação */
+    /* p:first-of-type{
+    text-align: center;
+} */
+    .bold {
+
+      font-weight: 600;
+
+    }
+
+    .italic,
+
+    .whatsapp {
+
+      font-style: italic;
+
+      text-align: center;
+
+    }
+    ul {
+
+      margin: 0;
+
+      padding: 0;
+
+      list-style: inside square;
+
+    }
+
+    li {
+
+      margin-bottom: 0.5rem;
+
+    }
+    .img-container {
+      text-align: center;
+      margin-top: 3rem;
+
+    }
+    .img-container img {
+
+      max-width: 100%;
+
+      border-radius: 50%;
+
+      /* limitando a largura maxima */
+      height: 150px;
+      width: 150px;
+    }
+    header {
+      background-color: #434242;
+      color: #fff;
+      border-radius: 8px;
+    }
+    h1 {
+      color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .redes a {
+      color: #0C0C0C;
+    }
+    @media screen and (max-width: 768px) {
+      .container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .conteudo-direita {
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="imagens/logo-mayara.jpeg" alt="Logo" class="logo">
+  <div class="container">
+    <header>
+      <div class="img-container">
+        <img src="imagens/logo-mayara.jpeg" alt="Mayara Lingerie">
+      </div>
+      <h1></h1>
+    </header>
+    <div class="principal">
+      <div class="conteudo-esquerda">
+        <hr>
+        <h2>Destaques</h2>
+
+        
+      </div>
+      <div class="conteudo-direita">
+        
+        
+        <div class="redes">
+          
+        </div>
+      </div>
     </div>
-    <nav class="navbar">
-      <button class="navbar-toggle" aria-label="Toggle menu">
-        <span class="navbar-toggle-icon"></span>
-      </button>
-      <ul class="navbar-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="image-container">
-      <img src="image1.jpg" alt="Image 1">
-      <img src="image2.jpg" alt="Image 2">
-      <img src="image3.jpg" alt="Image 3">
-    </div>
-  </main>
+  </div>
 </body>
 </html>
