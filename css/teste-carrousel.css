@@ -17,24 +17,31 @@ h1, h2 {
 
 .carousel {
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
     margin: 20px auto;
 }
 
 .carousel-images img {
     width: 100%;
     display: none;
+    height: auto; /* Mantém o aspecto das imagens */
 }
 
 button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+button:hover {
+    opacity: 1;
 }
 
 .prev {
@@ -43,4 +50,29 @@ button {
 
 .next {
     right: 10px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        padding: 8px;
+    }
+
+    header h1, header h2 {
+        font-size: 14px;
+    }
 }
