@@ -89,6 +89,18 @@
             color: white;
             text-decoration: none;
         }
+
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 2em);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -115,10 +127,15 @@
             <?php
             include 'produtos.php';
             foreach ($produtos as $produto) {
+                $nome = htmlspecialchars($produto['nome'], ENT_QUOTES, 'UTF-8');
+                $descricao = htmlspecialchars($produto['descricao'], ENT_QUOTES, 'UTF-8');
+                $preco = number_format($produto['preco'], 2, ',', '.');
+                $imagem = htmlspecialchars($produto['imagem'], ENT_QUOTES, 'UTF-8');
+
                 echo "<div class='product'>";
-                echo "<img src='imagens/{$produto['imagem']}' alt='{$produto['nome']}'>";
-                echo "<h2>{$produto['nome']}</h2>";
-                echo "<p>R$ " . number_format($produto['preco'], 2, ',', '.') . "</p>";
+                echo "<img src='imagens/{$imagem}' alt='{$nome}'>";
+                echo "<h2>{$nome}</h2>";
+                echo "<p>R$ {$preco}</p>";
                 echo "<button>Adicionar ao carrinho</button>";
                 echo "</div>";
             }
