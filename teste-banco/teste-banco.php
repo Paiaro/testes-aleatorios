@@ -64,11 +64,17 @@
             padding: 1em;
             width: calc(33.333% - 2em);
             box-sizing: border-box;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .product img {
             width: 100%;
             height: auto;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         footer {
